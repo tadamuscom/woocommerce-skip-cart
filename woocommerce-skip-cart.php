@@ -23,7 +23,8 @@ class WooCommerce_Skip_Cart
 
 	public function menu(): void
 	{
-		add_management_page('WooCommerce Skip Cart', 'WooCommerce Skip Cart', 'manage_options', 'smwoo-skip-cart', array($this, 'page_callback'));
+		add_submenu_page('woocommerce', 'WooCommerce Skip Cart', 'Skip Cart', 'manage_options', 'smwoo-skip-cart', array($this, 'page_callback'));
+
 	}
 
 	public function page_callback(): void
