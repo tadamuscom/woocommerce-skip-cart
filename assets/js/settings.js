@@ -1,22 +1,17 @@
-const form              = document.getElementById('smwoo-settings-form')
-const skipCart          = document.getElementById('smwoo-skip-cart')
-const clearCart         = document.getElementById('smwoo-clear-cart')
-const completeOrder     = document.getElementById('smwoo-complete-order')
-const nonce             = document.getElementById('smwoo-settings-nonce')
-const action            = document.getElementById('smwoo-settings-action')
-const notificationWrap   = document.getElementById ('smwoo-notification-wrap')
-const notificationParagraph   = document.getElementById ('smwoo-notification-paragraph')
+const form              			= document.getElementById('smwoo-settings-form');
+const skipCart          			= document.getElementById('smwoo-skip-cart');
+const clearCart         			= document.getElementById('smwoo-clear-cart');
+const completeOrder     			= document.getElementById('smwoo-complete-order');
+const nonce             			= document.getElementById('smwoo-settings-nonce');
+const action            			= document.getElementById('smwoo-settings-action');
+const notificationWrap  			= document.getElementById ('smwoo-notification-wrap');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
-
-    let skip        = false;
-    let clear       = false;
-    let complete    = false;
-
-    if(skipCart.checked) skip           = true
-    if(clearCart.checked) clear         = true
-    if(completeOrder.checked) complete  = true
+		
+		const skip = !!skipCart.checked;
+		const clear = !!clearCart.checked;
+		const complete = !!completeOrder.checked;
 
     notificationWrap.style.display = 'none'
     notificationWrap.classList = ''
