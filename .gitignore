@@ -1,0 +1,12 @@
+*.sublime-project
+*.sublime-workspace
+composer.lock
+*.codekit
+.DS_Store
+*.idea
+.idea/vcs.xml
+**/node_modules
+**/package-lock.json
+**/vendor
+.vscode/launch.json
+wp-fusion.code-workspace
